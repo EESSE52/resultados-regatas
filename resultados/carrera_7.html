@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#003f99">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>K1 JUNIOR OPEN FEMENINO · Heat 2</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="hero-row">
+        <div></div>
+        <div class="hero-main">
+          <h1>K1 JUNIOR OPEN FEMENINO · Heat 2</h1>
+          <h2>2026-11-11</h2>
+          
+      <div class="toolbar">
+        <button id="themeToggle" class="btn">🌙 Oscuro</button>
+        
+      </div>
+    
+          
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="../programa.html">Programa</a>
+        <a href="../resultados.html">Resultados</a>
+        <a href="../rankings.html">Rankings</a>
+        <a href="../inscripciones.html">Inscripciones</a>
+      </nav>
+    
+        </div>
+        <div></div>
+      </div>
+      
+    </div>
+    <div class="content">
+      <p><a href='../programa.html'>Volver al programa</a></p><div class="results-hdr"><div class="results-hdr-label">Resultados confirmados</div><div class="results-hdr-cat">K1 JUNIOR OPEN FEMENINO · Heat 2</div><div class="results-hdr-meta"></div></div><div class="podium"><div class="podium-card gold"><div class="podium-pos">1° Lugar</div><div class="podium-name">DEP1</div><div class="podium-meta">#1 · CLUB PRUEBA1 </div><div class="podium-meta">00:00:46.210</div></div><div class="podium-card silver"><div class="podium-pos">2° Lugar</div><div class="podium-name">DEP2</div><div class="podium-meta">#3 · CLUB PRUEBA1 </div><div class="podium-meta">00:00:56.230</div></div></div><table class="tabla"><thead><tr><th>Pos</th><th>Carril</th><th>Nº</th><th>Deportistas</th><th>Club</th><th>Tiempo</th><th>Dif.</th></tr></thead><tbody><tr class="pos-gold"><td data-label="Pos"><span class="pos-num">1</span></td><td data-label="Carril">2</td><td data-label="Nº">1</td><td data-label="Deportistas"><b>DEP1</b></td><td data-label="Club">CLUB PRUEBA1</td><td data-label="Tiempo"><span><b>00:00:46.210</b> <span class="status ">FINALIZADO</span></span></td><td data-label="Dif."><span class="dif-time">—</span></td></tr><tr class="pos-silver"><td data-label="Pos"><span class="pos-num">2</span></td><td data-label="Carril">3</td><td data-label="Nº">3</td><td data-label="Deportistas"><b>DEP2</b></td><td data-label="Club">CLUB PRUEBA1</td><td data-label="Tiempo"><span><b>00:00:56.230</b> <span class="status ">FINALIZADO</span></span></td><td data-label="Dif."><span class="dif-time">+10.0</span></td></tr><tr class=""><td data-label="Pos"><span class="pos-num"></span></td><td data-label="Carril">4</td><td data-label="Nº">9</td><td data-label="Deportistas"><b>DEPG</b></td><td data-label="Club">CLUB PRUEBA2</td><td data-label="Tiempo"><span><b></b> <span class="status nonfinish">DNF</span></span></td><td data-label="Dif."><span class="dif-time"></span></td></tr></tbody></table>
+    </div>
+    <div class="footer">
+      <p>Creado por Trianova-AI.com</p>
+    </div>
+  </div>
+  
+    <nav class="bottom-nav" aria-label="Menú">
+      <a href="../index.html"><span class="nav-icon">🏠</span>Inicio</a>
+      <a href="../programa.html"><span class="nav-icon">📋</span>Programa</a>
+      <a href="../resultados.html"><span class="nav-icon">🏆</span>Resultados</a>
+      <a href="../rankings.html"><span class="nav-icon">📊</span>Rankings</a>
+      <a href="../inscripciones.html"><span class="nav-icon">👥</span>Inscritos</a>
+    </nav>
+  
+<script>
+(function(){
+  const KEY = 'theme';
+  const root = document.documentElement;
+  const saved = localStorage.getItem(KEY);
+  if (saved === 'dark' || saved === 'light') {
+    root.setAttribute('data-theme', saved);
+  } else {
+    root.setAttribute('data-theme', 'light');
+  }
+  function updateIcon(btn){
+    if (!btn) return;
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    btn.textContent = isDark ? '☀️ Claro' : '🌙 Oscuro';
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.getElementById('themeToggle');
+    if (btn){
+      updateIcon(btn);
+      btn.addEventListener('click', function(){
+        const cur = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', cur);
+        localStorage.setItem(KEY, cur);
+        updateIcon(btn);
+      });
+    }
+    const regen = document.getElementById('regenBtn');
+    if (regen){
+      regen.addEventListener('click', function(){
+        window.location.href = 'gestor://regenerar';
+      });
+    }
+    const reload = document.getElementById('reloadBtn');
+    if (reload){
+      reload.addEventListener('click', function(){
+        window.location.reload();
+      });
+    }
+  });
+})();
+</script>
+
+<!-- WRAPPED_BY_GESTOR -->
+</body>
+</html>
