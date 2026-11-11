@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#003f99">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Carrera 2</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="hero-row">
+        <div></div>
+        <div class="hero-main">
+          <h1>Carrera 2</h1>
+          <h2>2026-11-11</h2>
+          
+      <div class="toolbar">
+        <button id="themeToggle" class="btn">🌙 Oscuro</button>
+        
+      </div>
+    
+          
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="../index.html">Inicio</a>
+        <a href="../programa.html">Programa</a>
+        <a href="../resultados.html">Resultados</a>
+        <a href="../rankings.html">Rankings</a>
+        <a href="../inscripciones.html">Inscripciones</a>
+      </nav>
+    
+        </div>
+        <div></div>
+      </div>
+      
+    </div>
+    <div class="content">
+      <p><a href='../programa.html'>Volver al programa</a></p><h3>Heat 1 · C1 JUNIOR MASCULINO 500</h3><p>2026-11-11 10:00 · Confirmada</p>
+<table class="tabla"><thead><tr><th>Puesto</th><th>Carril</th><th>Nº</th><th>Tripulación</th><th>Club</th><th>Tiempo</th><th>Estado</th></tr></thead><tbody>
+<tr><td data-label="Puesto">1</td><td data-label="Carril">4</td><td data-label="Nº">2</td><td data-label="Tripulación">DEPJ</td><td data-label="Club">CLUB PRUEBA2</td><td data-label="Tiempo">00:01:48.230</td><td data-label="Estado">Finalizado</td></tr>
+<tr><td data-label="Puesto">2</td><td data-label="Carril">1</td><td data-label="Nº">3</td><td data-label="Tripulación">DEP7</td><td data-label="Club">CLUB PRUEBA1</td><td data-label="Tiempo">00:01:50.230</td><td data-label="Estado">Finalizado</td></tr>
+<tr><td data-label="Puesto">3</td><td data-label="Carril">2</td><td data-label="Nº">8</td><td data-label="Tripulación">DEP6</td><td data-label="Club">CLUB PRUEBA1</td><td data-label="Tiempo">00:01:51.240</td><td data-label="Estado">Finalizado</td></tr>
+<tr><td data-label="Puesto">4</td><td data-label="Carril">3</td><td data-label="Nº">6</td><td data-label="Tripulación">DEP9</td><td data-label="Club">CLUB PRUEBA1</td><td data-label="Tiempo">00:01:56.250</td><td data-label="Estado">Finalizado</td></tr>
+</tbody></table>
+    </div>
+    <div class="footer">
+      <p>Creado por Trianova-AI.com</p>
+    </div>
+  </div>
+  
+    <nav class="bottom-nav" aria-label="Menú">
+      <a href="../index.html"><span class="nav-icon">🏠</span>Inicio</a>
+      <a href="../programa.html"><span class="nav-icon">📋</span>Programa</a>
+      <a href="../resultados.html"><span class="nav-icon">🏆</span>Resultados</a>
+      <a href="../rankings.html"><span class="nav-icon">📊</span>Rankings</a>
+      <a href="../inscripciones.html"><span class="nav-icon">👥</span>Inscritos</a>
+    </nav>
+  
+<script>
+(function(){
+  const KEY = 'theme';
+  const root = document.documentElement;
+  const saved = localStorage.getItem(KEY);
+  if (saved === 'dark' || saved === 'light') {
+    root.setAttribute('data-theme', saved);
+  } else {
+    root.setAttribute('data-theme', 'light');
+  }
+  function updateIcon(btn){
+    if (!btn) return;
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    btn.textContent = isDark ? '☀️ Claro' : '🌙 Oscuro';
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    const btn = document.getElementById('themeToggle');
+    if (btn){
+      updateIcon(btn);
+      btn.addEventListener('click', function(){
+        const cur = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', cur);
+        localStorage.setItem(KEY, cur);
+        updateIcon(btn);
+      });
+    }
+    const regen = document.getElementById('regenBtn');
+    if (regen){
+      regen.addEventListener('click', function(){
+        window.location.href = 'gestor://regenerar';
+      });
+    }
+    const reload = document.getElementById('reloadBtn');
+    if (reload){
+      reload.addEventListener('click', function(){
+        window.location.reload();
+      });
+    }
+  });
+})();
+</script>
+
+<!-- WRAPPED_BY_GESTOR -->
+</body>
+</html>
